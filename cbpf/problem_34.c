@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int gcd(int a,int b){
+    int result;
+    if(a>b)
+    result=b;
+    else 
+    result=a;
+    while(result>0){
+        if(a%result==0&&b%result==0)
+        break;
+        result--;
+    }
+    return result;
+}
+int main(){
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("%d\n",gcd(a,b));
+}
